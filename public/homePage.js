@@ -45,40 +45,6 @@ function getRates() {
     }
   });
 }
-/*
-function addMoneyAction(data) {
-  ApiConnector.addMoney(data, answerFromServer => {    
-    if (answerFromServer.success) {
-      ProfileWidget.showProfile(answerFromServer.data);
-      moneyManager.setMessage(answerFromServer.success, 'Баланс успешно пополнен');
-    } else {
-      moneyManager.setMessage(answerFromServer.success, answerFromServer.error);
-    }
-  });
-}
-
-function conversionMoneyAction(data) {
-  ApiConnector.convertMoney(data, answerFromServer => {    
-    if (answerFromServer.success) {
-      ProfileWidget.showProfile(answerFromServer.data);
-      moneyManager.setMessage(answerFromServer.success, 'Конвертация успешно выполнена');
-    } else {
-      moneyManager.setMessage(answerFromServer.success, answerFromServer.error);
-    }
-  });
-}
-
-function sendMoneyAction(data) {
-  ApiConnector.transferMoney(data, answerFromServer => {    
-    if (answerFromServer.success) {
-      ProfileWidget.showProfile(answerFromServer.data);
-      moneyManager.setMessage(answerFromServer.success, 'Перевод успешно выполнен');
-    } else {
-      moneyManager.setMessage(answerFromServer.success, answerFromServer.error);
-    }
-  });
-}
-*/
 
 function profileWidgetAction(actionFunc, data, successMessage) {
   actionFunc(data, answerFromServer => {    
@@ -103,31 +69,3 @@ function favoritesWidgetAction(actionFunc, data, successMessage) {
     }
   });
 }
-
-/*
-function addUserAction(data) {
-  ApiConnector.addUserToFavorites(data, answerFromServer => {    
-    if (answerFromServer.success) {
-      favoritesWidget.clearTable();
-      favoritesWidget.fillTable(answerFromServer.data);
-      moneyManager.updateUsersList(answerFromServer.data);
-      favoritesWidget.setMessage(answerFromServer.success, 'Пользователь успешно добавлен');
-    } else {
-      favoritesWidget.setMessage(answerFromServer.success, answerFromServer.error);
-    }
-  });
-}
-
-function removeUserAction(data) {
-  ApiConnector.removeUserFromFavorites(data, answerFromServer => {    
-    if (answerFromServer.success) {
-      favoritesWidget.clearTable();
-      favoritesWidget.fillTable(answerFromServer.data);
-      moneyManager.updateUsersList(answerFromServer.data);
-      favoritesWidget.setMessage(answerFromServer.success, 'Пользователь успешно удален');
-    } else {
-      favoritesWidget.setMessage(answerFromServer.success, answerFromServer.error);
-    }
-  });
-}
-*/
